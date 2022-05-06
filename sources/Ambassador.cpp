@@ -52,6 +52,9 @@ namespace coup
             p.getOnPlayer()->setCoins(2, '+');
             p.setCoins(2, '-');
         }
+        else if(p.getLastAction() != Action::steal2_A){
+            throw std::logic_error("captain didn't steal");
+        }
     }
 
 }
